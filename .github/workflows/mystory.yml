@@ -1,8 +1,10 @@
 name: This is my Github Actions File
 
 on:
+    pull_request:
+      paths: 'storybook/**'
     push:
-        paths: 'storybook/**'
+      branches: [ "main" ]
     
     workflow_dispatch: 
 
