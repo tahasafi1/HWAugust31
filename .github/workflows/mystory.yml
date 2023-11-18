@@ -1,0 +1,26 @@
+name: This is my Github Actions File
+
+on:
+    push:
+        paths: 'storybook/**'
+    
+    workflow_dispatch: 
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: This is a linux command
+              run: |
+               echo "This is a Linux Command"
+               echo "I love apples you know"
+               echo "We know who it is"
+
+            - name: This is another linux command with one line
+              run: echo "This is an example of how to use the action in this file."
+
+
+
