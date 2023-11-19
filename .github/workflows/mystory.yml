@@ -7,6 +7,15 @@ on:
       branches: [ "main" ]
     
     workflow_dispatch: 
+      inputs:
+        story_title:
+          description: 'input your story title here'
+          required: true
+          type: string
+        author_name: 
+          description: 'input your author name here'
+          required: true
+          type: string
 
 jobs:
     build:
@@ -17,12 +26,13 @@ jobs:
 
             - name: This is a linux command
               run: |
-               echo "This is a Linux Command"
-               echo "I love apples you know"
-               echo "We know who it is"
+               echo "Once upon a time in a faraway land"
+               echo " ${{ inputs.story_title }} was written by ${{ inputs.author_name }}"
+               echo "This whimsical tale takes you on a journey through a magical forest where every flower could talk."
+               echo "Will you explore its secrets?"
 
-            - name: This is another linux command with one line
-              run: echo "This is an example of how to use the action in this file."
+            - name: One last line
+              run: echo "Done."
 
 
 
