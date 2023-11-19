@@ -27,7 +27,7 @@ jobs:
             - name: This is a linux command
               run: |
                echo "Once upon a time in a faraway land"
-               echo " ${{ inputs.story_title }} was written by ${{ inputs.author_name }}"
+               echo " ${{ inputs.story_title || 'Adventures of the Secrets' }} was written by ${{ inputs.author_name || 'Apple' }}"
                echo "This whimsical tale takes you on a journey through a magical forest where every flower could talk."
                echo "Will you explore its secrets?"
 
