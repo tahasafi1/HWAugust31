@@ -20,6 +20,9 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        strategy:
+          matrix:
+            customers: [ Muhammad, Ahmed, Zaid, Shakir ]
         
         steps:
             - uses: actions/checkout@v3
@@ -31,8 +34,10 @@ jobs:
                echo "This whimsical tale takes you on a journey through a magical forest where every flower could talk."
                echo "Will you explore its secrets?"
 
-            - name: One last line
-              run: echo "Done."
+            - name: Matrix Technique Now
+              run: |
+               echo " This is for ${{ matrix.customers }}"
+               echo " It is done "
 
 
 
